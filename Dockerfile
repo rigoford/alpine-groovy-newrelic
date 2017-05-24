@@ -4,6 +4,8 @@ MAINTAINER Martin Ford <ford.j.martin@gmail.com>
 
 ARG NEWRELIC_AGENT_VERSION=3.33.0
 
+USER root
+
 RUN apk --no-cache add curl unzip && \
     mkdir -p /tmp /opt/newrelic/logs && \
     curl -o /tmp/newrelic-java.zip -fSL \
